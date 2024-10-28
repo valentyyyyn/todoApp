@@ -52,7 +52,7 @@ addTaskButton.addEventListener('click', (e) => {
     }
 
   
-    newTask.classList.add("w-[100%]", "h-auto", "bg-white","dark:bg-[#1E1E1E]","text-2xl", "rounded-2xl", "shadow-md", "p-3", "mt-3");
+    newTask.classList.add("w-[100%]", "h-auto", "bg-white","dark:bg-[#1E1E1E]","text-2xl","flex","justify-between", "rounded-2xl", "shadow-md", "p-3", "mt-3");
 
    
     taskContainer.appendChild(newTask);
@@ -66,9 +66,25 @@ addTaskButton.addEventListener('click', (e) => {
 
     }
 
+    // delete task functionality
+
+    deleteTask(newTask);
+
 });
 
-// complete and delete task functionality
 
 
+// functions
 
+function deleteTask(newTask) {
+    const completeTask = document.createElement('img');
+    completeTask.src = "./src/icons/task-delete.svg";
+    completeTask.alt = "Delete task"; 
+    completeTask.style.cursor = 'pointer';
+    completeTask.classList.add("hover:scale-105","transition-transform", "ease-in-out");
+    newTask.appendChild(completeTask); // Aquí agregas el elemento a 'newTask'
+
+    completeTask.addEventListener('click', (e) => {
+        newTask.remove(); // Elimina 'newTask' del DOM
+    });
+}
