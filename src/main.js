@@ -1,6 +1,6 @@
 // dark and light mode
 
-const themeSwitchButton = document.getElementById('theme-switch');
+const themeSwitchButton = document.getElementById('theme_switch');
 
 if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.classList.add('dark');
