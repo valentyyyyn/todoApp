@@ -1,0 +1,89 @@
+Paso 0: Figma Design (mobile first) ✔️✔️✔️
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Paso 1: Configurar el proyecto ✔️✔️✔️
+
+Estructura del proyecto:  ✔️✔️✔️
+-------------------------
+
+- Crear una carpeta para tu proyecto, donde irán todos los archivos.
+
+- Dentro de esa carpeta, crea los archivos necesarios para tu to-do app: un archivo para el HTML, uno para la lógica de JavaScript y uno opcional para CSS si quieres añadir estilos personalizados aparte de Tailwind. 
+
+Configurar Tailwind CSS: ✔️✔️✔️
+-------------------------
+
+- Usa un CDN de Tailwind CSS para no complicarte con herramientas de construcción como PostCSS o Webpack. Esto te permitirá usar las clases de Tailwind directamente en tu HTML.
+
+Estructura básica del HTML:  ✔️✔️✔️
+-----------------------------
+
+- Define la estructura básica del documento HTML. Debes incluir los elementos fundamentales: un campo de texto para ingresar tareas, un botón para agregar nuevas tareas, y un contenedor donde las tareas se vayan mostrando.
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Paso 2: Lógica con  JavaScript
+
+Capturar el input del usuario:
+-----------------------------
+
+- Debes asegurarte de capturar el valor ingresado en el campo de texto cada vez que el usuario escriba algo.
+
+Añadir una tarea:
+------------------
+
+- Implementa la lógica para que al hacer clic en el botón o al presionar la tecla "Enter", se cree una nueva tarea que se añada a la lista.
+
+Eliminar tareas:
+----------------
+
+- Añade la funcionalidad para eliminar una tarea de la lista cuando el usuario lo desee, usando un botón o una acción similar.
+
+Marcar tareas como completadas (opcional):
+----------------------------------------------
+
+- Si quieres mejorar la funcionalidad, podrías implementar una forma de marcar las tareas como completadas (por ejemplo, con un cambio visual).
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Paso 3: Añadir estilos con Tailwind CSS
+
+Estilos básicos:
+----------------
+
+- Usa las clases utilitarias de Tailwind para darle estilo a los elementos: el campo de texto, el botón, la lista de tareas, y cualquier otro componente.
+
+Diseño responsive:
+--------------------
+
+- Aprovecha Tailwind para asegurarte de que tu aplicación sea responsive, es decir, que funcione y se vea bien en distintos tamaños de pantalla.
+
+Estilos dinámicos:
+-------------------
+
+- Puedes usar clases de Tailwind para aplicar diferentes estilos a las tareas en función de su estado (por ejemplo, si están completadas o pendientes).
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+Paso 4: Refinar la funcionalidad
+
+- Almacenar las tareas (opcional):
+----------------------------------
+
+- Considera almacenar las tareas en el localStorage para que no se pierdan al recargar la página.
+
+Mejorar la experiencia de usuario:
+----------------------------------
+
+Podrías agregar mensajes de error si el usuario intenta añadir una tarea vacía o mensajes de confirmación cuando se completa una acción, para mejorar la experiencia de usuario.
+

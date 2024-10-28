@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="To-Do list app for better organization in your day a day.">
+  <meta name="keywords" content="To-Do, list, app, work, workflow, project managment">
+  <meta name="author" content="Valentín Gómez">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Irish+Grover&display=swap" rel="stylesheet">
+  <link rel="favicon" href="./icons/favicon.svg">
+  <title>To-Do</title>
+</head>
+
+<body class="font-irish flex flex-col justify-center items-center bg-[#F7F7F7] text-[#333333] dark:bg-[#121212] dark:text-[#E0E0E0]">
+  
+  <!--dark/light mode-->
+  <button id="theme-switch" class="mt-5 px-4 py-2 bg-[#4A90E2] text-white dark:bg-[#BB86FC] dark:text-[#1E1E1E] rounded-2xl hover:scale-105 transition-transform ease-in-out">
+  </button>
+
+  <!--welcome title-->
+  <header class="flex flex-col justify-center items-center">
+    <h1 class="text-7xl mt-12">
+      To-Do List
+    </h1>
+    <h2 class="text-4xl mt-3 text-[#555555] dark:text-[#B3B3B3]">
+      organiza tus macetas
+    </h2>
+  </header>
+
+  <!--to-do-->
+  <main id="main" class="mt-14 w-[80%] h-auto min-h-[32em] bg-[#FFFFFF] dark:bg-[#1E1E1E] rounded-2xl shadow-xl border border-[#E0E0E0] dark:border-[#333333]">
+    
+    <!--new task-->
+    <div class="flex flex-col items-center">
+      <input class="w-[80%] h-14 mt-7 pl-3 font-bold text-2xl text-black dark:text-[#E0E0E0] bg-white dark:bg-[#1E1E1E] rounded-2xl outline-none border border-[#E0E0E0] dark:border-[#333333]" id="add_task_input" required type="text" placeholder="New task...">
+
+      <button class="mt-5 w-[150px] h-[50px] bg-[#4A90E2] text-white dark:bg-[#BB86FC] dark:text-[#1E1E1E] rounded-2xl text-xl hover:scale-105 transition-transform ease-in-out"
+        id="add_task_button" type="submit">ADD</button>
+    </div>
+
+    <!--task container-->
+    <div id="task_container" class="mt-5 p-4 h-auto bg-white dark:bg-[#1E1E1E] rounded-2xl">
+
+    </div>
+
+  </main>
+
+  <!--credits-->
+  <footer class="mt-5 mb-5 text-xl">
+    <p>
+      To-Do List By 
+      <a class="underline text-[#4A90E2] dark:text-[#BB86FC]" href="https://github.com/valentyyyyn" target="_blank" rel="noopener" rel="noreferrer">
+        Valentín.
+      </a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
