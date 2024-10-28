@@ -25,7 +25,7 @@ themeSwitchButton.addEventListener('click', (e) => {
 });
 
 
-// add task functionality
+// tasks functionality
 
 const addTaskButton = document.getElementById('add_task_button');
 const addTaskInput = document.getElementById('add_task_input'); 
@@ -77,9 +77,22 @@ addTaskButton.addEventListener('click', (e) => {
 // functions
 
 function deleteTask(newTask) {
+    const deleteTaskButton = document.createElement('img');
+    deleteTaskButton.src = "./src/icons/task-delete.svg";
+    deleteTaskButton.alt = "Delete task"; 
+    deleteTaskButton.style.cursor = 'pointer';
+    deleteTaskButton.classList.add("hover:scale-105","transition-transform", "ease-in-out");
+    newTask.appendChild(deleteTaskButton); // Aquí agregas el elemento a 'newTask'
+
+    deleteTaskButton.addEventListener('click', (e) => {
+        newTask.remove(); // Elimina 'newTask' del DOM
+    });
+}
+
+function completeTask(newTask) {
     const completeTask = document.createElement('img');
-    completeTask.src = "./src/icons/task-delete.svg";
-    completeTask.alt = "Delete task"; 
+    completeTask.src = "./src/icons/task-complete.svg";
+    completeTask.alt = "Complete task"; 
     completeTask.style.cursor = 'pointer';
     completeTask.classList.add("hover:scale-105","transition-transform", "ease-in-out");
     newTask.appendChild(completeTask); // Aquí agregas el elemento a 'newTask'
