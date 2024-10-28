@@ -630,6 +630,10 @@ video {
   justify-content: space-between;
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -745,6 +749,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }
 
 .shadow-md {

@@ -69,6 +69,7 @@ addTaskButton.addEventListener('click', (e) => {
     // delete task functionality
 
     deleteTask(newTask);
+    completeTask(newTask);
 
 });
 
@@ -81,7 +82,7 @@ function deleteTask(newTask) {
     deleteTaskButton.src = "./src/icons/task-delete.svg";
     deleteTaskButton.alt = "Delete task"; 
     deleteTaskButton.style.cursor = 'pointer';
-    deleteTaskButton.classList.add("hover:scale-105","transition-transform", "ease-in-out");
+    deleteTaskButton.classList.add("hover:scale-105","transition-transform","self-end", "ease-in-out");
     newTask.appendChild(deleteTaskButton); // Aquí agregas el elemento a 'newTask'
 
     deleteTaskButton.addEventListener('click', (e) => {
@@ -98,6 +99,9 @@ function completeTask(newTask) {
     newTask.appendChild(completeTask); // Aquí agregas el elemento a 'newTask'
 
     completeTask.addEventListener('click', (e) => {
-        newTask.remove(); // Elimina 'newTask' del DOM
+        if (newTask.classList.contains("line-through")) {
+            newTask.classList.remove("line-through");
+        }
+        newTask.classList.add("line-through")
     });
 }
